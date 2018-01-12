@@ -12,17 +12,25 @@ namespace SupermarketPricingKata.Domain.StandardPricer
             { "B" ,0.30 }
         };
 
-        public double GetPrice(string item)
+        public double GetPrice(string items)
         {
+            double total = 0;
+            if (String.IsNullOrEmpty(items)) { throw new ArgumentNullException("item"); }
 
-            if (_itemPriceDictionary.ContainsKey(item))
+            foreach (char item in items.ToCharArray())
             {
-                return _itemPriceDictionary[item];
+                if (_itemPriceDictionary.ContainsKey(item.ToString()))
+                {
+                    total = total + _itemPriceDictionary[item.ToString()];
+                }
+                else
+                {
+                    throw new KeyNotFoundException($"Couldn't find item {item} in the dictionary");
+                }
             }
-            else
-            {
-                throw new NotImplementedException("$Couldn't location item {item} in the dictionary");
-            }
+
+            return total;
+
         }
     }
 }
