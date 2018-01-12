@@ -9,7 +9,9 @@ namespace SupermarketPricingKata.Domain.StandardPricer
         private Dictionary<string, double> _itemPriceDictionary = new Dictionary<string, double>()
         {
             { "A", 0.50 },
-            { "B" ,0.30 }
+            { "B" ,0.30 },
+            { "C" ,0.20 },
+            { "D" ,0.15 }
         };
 
         public double GetPrice(string items)
