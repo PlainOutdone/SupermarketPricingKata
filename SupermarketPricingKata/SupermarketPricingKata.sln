@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupermarketPricingKata.Inte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupermarketPricingKata.UnitTests", "SupermarketPricingKata.UnitTests\SupermarketPricingKata.UnitTests.csproj", "{D276847D-761F-4733-8CD1-0D93CE8E28B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupermarketPricingKata.Models", "SupermarketPricingKata.Models\SupermarketPricingKata.Models.csproj", "{D24B8488-5C4F-4858-930B-CE0FB0089F7F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D276847D-761F-4733-8CD1-0D93CE8E28B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D276847D-761F-4733-8CD1-0D93CE8E28B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D276847D-761F-4733-8CD1-0D93CE8E28B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24B8488-5C4F-4858-930B-CE0FB0089F7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24B8488-5C4F-4858-930B-CE0FB0089F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24B8488-5C4F-4858-930B-CE0FB0089F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24B8488-5C4F-4858-930B-CE0FB0089F7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

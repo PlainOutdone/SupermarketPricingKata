@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SupermarketPricingKata.Domain.TillController
 {
-    public class DefaultTillController
+    public class DefaultTillController : ITillController
     {
         private IStandardPricer _standardPricer;
         public DefaultTillController(IStandardPricer standardPricer)
@@ -13,7 +13,12 @@ namespace SupermarketPricingKata.Domain.TillController
             _standardPricer = standardPricer;
         }
 
-        
+        public double GetPrice(string items)
+        {
+            double standardPrice = _standardPricer.GetPrice(items);
+            
+            return standardPrice;
+        }
     }
 
     public interface ITillController
