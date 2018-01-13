@@ -17,7 +17,7 @@ namespace SupermarketPricingKata.Domain.StandardPricer
         public double GetPrice(string items)
         {
             double total = 0;
-            if (String.IsNullOrEmpty(items)) { throw new ArgumentNullException("item"); }
+            if (String.IsNullOrEmpty(items)) { return 0; }
 
             foreach (char item in items.ToCharArray())
             {

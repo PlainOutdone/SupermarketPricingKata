@@ -6,23 +6,35 @@ using Xunit;
 
 namespace SupermarketPricingKata.UnitTests
 {
-    
+
     public class DefaultStandardPricerTests
     {
 
-        [Fact]   
-        public static void WhenIGiveNoItemExpectANullException()
+        [Fact]
+        public static void WhenIGivenAnNullItemReturn0()
         {
             IStandardPricer pricer = new DefaultStandardPricer();
-            ArgumentNullException ex = Assert.Throws<ArgumentNullException>(() => pricer.GetPrice(null));
-            Assert.Equal("item", ex.ParamName);
+            var expected = 0;
+            var actual = pricer.GetPrice(null);
+            Assert.Equal(expected, actual);
+        }
+
+
+
+              [Fact]
+        public static void WhenIGivenAnEmptyStringItemReturn0()
+        {
+            IStandardPricer pricer = new DefaultStandardPricer();
+            var expected = 0;
+            var actual = pricer.GetPrice("");
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
         public static void WhenIGiveAValidItemReturnTheValueOfTheItem()
         {
             IStandardPricer pricer = new DefaultStandardPricer();
-           Assert.Equal(0.50, pricer.GetPrice("A"));
+            Assert.Equal(0.50, pricer.GetPrice("A"));
             Assert.Equal(0.30, pricer.GetPrice("B"));
         }
 
