@@ -7,10 +7,10 @@ using System.Text;
 
 namespace SupermarketPricingKata.Domain.OfferHandler
 {
-    public class DefaultOfferdataHandler : ISpecialOfferHandler
+    public class DefaultSpecialOfferHandler : ISpecialOfferHandler
     {
         private IOfferDataProvider _dataProvider;
-        public DefaultOfferdataHandler(IOfferDataProvider dataProvider)
+        public DefaultSpecialOfferHandler(IOfferDataProvider dataProvider)
         {
             _dataProvider = dataProvider;
         }
