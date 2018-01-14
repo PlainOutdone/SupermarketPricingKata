@@ -2,6 +2,7 @@
 {
     public interface ITillController
     {
-        decimal GetPrice(string items);
+        void Scan(string item);
+        decimal Total();
     }
 }

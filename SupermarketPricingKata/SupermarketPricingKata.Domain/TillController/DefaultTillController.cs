@@ -17,11 +17,18 @@ namespace SupermarketPricingKata.Domain.TillController
             _offerHandler = offerHandler;
         }
 
-        public decimal GetPrice(string items)
-        {
-            decimal standardPrice = _standardPricer.GetPrice(items);
+        private string _items = "";
 
-            return _offerHandler.ApplyOffers(standardPrice, items);
+        public void Scan(string item)
+        {
+            _items = $"{_items}{item}";
+        }
+
+        public decimal Total()
+        {
+            decimal standardPrice = _standardPricer.GetPrice(_items);
+
+            return _offerHandler.ApplyOffers(standardPrice, _items);
         }
     }
 }
