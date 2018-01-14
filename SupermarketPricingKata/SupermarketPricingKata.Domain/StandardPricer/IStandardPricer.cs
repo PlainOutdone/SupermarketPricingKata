@@ -2,6 +2,6 @@
 {
     public interface IStandardPricer
     {
-        double GetPrice(string item);
+        decimal GetPrice(string item);
     }
 }

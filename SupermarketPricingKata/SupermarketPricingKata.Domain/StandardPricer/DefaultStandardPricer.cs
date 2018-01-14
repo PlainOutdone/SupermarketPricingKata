@@ -6,17 +6,17 @@ namespace SupermarketPricingKata.Domain.StandardPricer
 {
     public class DefaultStandardPricer : IStandardPricer
     {
-        private Dictionary<string, double> _itemPriceDictionary = new Dictionary<string, double>()
+        private Dictionary<string, decimal> _itemPriceDictionary = new Dictionary<string, decimal>()
         {
-            { "A", 0.50 },
-            { "B" ,0.30 },
-            { "C" ,0.20 },
-            { "D" ,0.15 }
+            { "A", 0.50M },
+            { "B" ,0.30M },
+            { "C" ,0.20M },
+            { "D" ,0.15M }
         };
 
-        public double GetPrice(string items)
+        public decimal GetPrice(string items)
         {
-            double total = 0;
+            decimal total = 0;
             if (String.IsNullOrEmpty(items)) { return 0; }
 
             foreach (char item in items.ToCharArray())

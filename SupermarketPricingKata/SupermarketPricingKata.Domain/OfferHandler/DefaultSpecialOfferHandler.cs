@@ -15,16 +15,16 @@ namespace SupermarketPricingKata.Domain.OfferHandler
             _dataProvider = dataProvider;
         }
 
-        public double ApplyOffers(double price, string items)
+        public decimal ApplyOffers(decimal price, string items)
         {
 
-            double returnAmount = price;
+            decimal returnAmount = price;
             List<char> letters = items.ToCharArray().ToList();
 
             foreach (SpecialOffer offer in _dataProvider.GetOffers())
             {
                     List<char> offerSpecificLetters = letters.Where(l => l.ToString() == offer.Item).ToList();
-                    double qulifyingAmount = offerSpecificLetters.Count / offer.Quantity;
+                    decimal qulifyingAmount = offerSpecificLetters.Count / offer.Quantity;
                     returnAmount = returnAmount - (Math.Floor(qulifyingAmount) * offer.Reduction);
             }
 

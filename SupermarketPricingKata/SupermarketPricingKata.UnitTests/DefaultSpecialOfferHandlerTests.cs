@@ -13,8 +13,8 @@ namespace SupermarketPricingKata.UnitTests
         public static void WhenProvidedNoItemsReturnNoDeduction()
         {
             ISpecialOfferHandler handler = new DefaultSpecialOfferHandler(new DefaultOfferDataProvider());
-            var expected = 1.00;
-            var actual = handler.ApplyOffers(1.00, "");
+            var expected = 1.00M;
+            var actual = handler.ApplyOffers(1.00M, "");
             Assert.Equal(expected, actual);
         }
 
@@ -22,8 +22,8 @@ namespace SupermarketPricingKata.UnitTests
         public static void WhenProvidedItemsThatDontAdhearToOffersReturnThePrice()
         {
             ISpecialOfferHandler handler = new DefaultSpecialOfferHandler(new DefaultOfferDataProvider());
-            var expected = 1.00;
-            var actual = handler.ApplyOffers(1.00, "TESTYWESTY");
+            var expected = 1.00M;
+            var actual = handler.ApplyOffers(1.00M, "TESTYWESTY");
             Assert.Equal(expected, actual);
         }
 
@@ -31,8 +31,8 @@ namespace SupermarketPricingKata.UnitTests
         public static void WhenProvidedItemsThatMatchOffersReturnThePriceWithDeductionsMade()
         {
             ISpecialOfferHandler handler = new DefaultSpecialOfferHandler(new DefaultOfferDataProvider());
-            var expected = 2.65;
-            var actual = handler.ApplyOffers(3.00, "AAABB");
+            var expected = 2.65M;
+            var actual = handler.ApplyOffers(3.00M, "AAABB");
             Assert.Equal(expected, actual);
         }
 
@@ -40,8 +40,8 @@ namespace SupermarketPricingKata.UnitTests
         public static void WhenProvidedSeveralItemsThatMatchOffersReturnThePriceWithDeductionsMade()
         {
             ISpecialOfferHandler handler = new DefaultSpecialOfferHandler(new DefaultOfferDataProvider());
-            var expected = 2.45;
-            var actual = handler.ApplyOffers(3.00, "AAAHGAIAJIAGBHBBNUD");
+            var expected = 2.45M;
+            var actual = handler.ApplyOffers(3.00M, "AAAHGAIAJIAGBHBBNUD");
             Assert.Equal(expected, actual);
 
       

@@ -17,9 +17,9 @@ namespace SupermarketPricingKata.Domain.TillController
             _offerHandler = offerHandler;
         }
 
-        public double GetPrice(string items)
+        public decimal GetPrice(string items)
         {
-            double standardPrice = _standardPricer.GetPrice(items);
+            decimal standardPrice = _standardPricer.GetPrice(items);
 
             return _offerHandler.ApplyOffers(standardPrice, items);
         }

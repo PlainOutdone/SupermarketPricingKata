@@ -11,8 +11,8 @@ namespace SupermarketPricingKata.Domain.OfferDataProvider
         {
             return new List<SpecialOffer>()
             {
-                new SpecialOffer() {Item = "A", Quantity=3, Reduction=0.20},
-                new SpecialOffer() {Item = "B", Quantity=2, Reduction=0.15}
+                new SpecialOffer() {Item = "A", Quantity=3, Reduction=0.20M},
+                new SpecialOffer() {Item = "B", Quantity=2, Reduction=0.15M}
             };
         }
     }

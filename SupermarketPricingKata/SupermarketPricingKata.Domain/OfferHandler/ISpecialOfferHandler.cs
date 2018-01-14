@@ -2,7 +2,7 @@
 {
     public interface ISpecialOfferHandler
     {
-       double ApplyOffers(double price, string items);
+        decimal ApplyOffers(decimal price, string items);
     }
 
 }

@@ -2,6 +2,6 @@
 {
     public interface ITillController
     {
-       double GetPrice(string items);
+        decimal GetPrice(string items);
     }
 }

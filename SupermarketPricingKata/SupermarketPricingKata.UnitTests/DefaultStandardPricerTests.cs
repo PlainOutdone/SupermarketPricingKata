@@ -34,8 +34,8 @@ namespace SupermarketPricingKata.UnitTests
         public static void WhenIGiveAValidItemReturnTheValueOfTheItem()
         {
             IStandardPricer pricer = new DefaultStandardPricer();
-            Assert.Equal(0.50, pricer.GetPrice("A"));
-            Assert.Equal(0.30, pricer.GetPrice("B"));
+            Assert.Equal(0.50M, pricer.GetPrice("A"));
+            Assert.Equal(0.30M, pricer.GetPrice("B"));
         }
 
         [Fact]
@@ -52,7 +52,7 @@ namespace SupermarketPricingKata.UnitTests
         {
             var input = "AAB";
             IStandardPricer pricer = new DefaultStandardPricer();
-            var expected = 1.30;
+            var expected = 1.30M;
             var actual = pricer.GetPrice(input);
 
             Assert.Equal(expected, actual);

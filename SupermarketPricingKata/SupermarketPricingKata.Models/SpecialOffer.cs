@@ -6,6 +6,6 @@ namespace SupermarketPricingKata.Models
     {
         public string Item;
         public int Quantity;
-        public double Reduction;
+        public decimal Reduction;
     }
 }
